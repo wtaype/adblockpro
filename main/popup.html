@@ -9,24 +9,50 @@
   <body>
     <main class="panel">
       <header class="cabecera">
+        <div class="marca-grupo">
+          <img class="logo" src="../assets/icons/logo48x48.png" alt="" width="36" height="36">
+          <div>
+            <p class="marca">AdBlock Pro</p>
+            <p id="estado" class="estado">Proteccion activa</p>
+          </div>
+        </div>
+        <button id="opciones" class="icono-boton" type="button" title="Abrir opciones" aria-label="Abrir opciones">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4Z"></path>
+            <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6v.2a2 2 0 1 1-4 0V21a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1A2 2 0 1 1 4.2 17l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H2.8a2 2 0 1 1 0-4H3a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9L4.2 7A2 2 0 1 1 7 4.2l.1.1a1.7 1.7 0 0 0 1.9.3h.1a1.7 1.7 0 0 0 .9-1.6v-.2a2 2 0 1 1 4 0V3a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1A2 2 0 1 1 19.8 7l-.1.1a1.7 1.7 0 0 0-.3 1.9v.1a1.7 1.7 0 0 0 1.6.9h.2a2 2 0 1 1 0 4H21a1.7 1.7 0 0 0-1.6 1Z"></path>
+          </svg>
+        </button>
+      </header>
+
+      <section class="estado-card">
+        <div class="escudo" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2.2 20 5.5v6.2c0 5-3.3 8.4-8 10.1-4.7-1.7-8-5.1-8-10.1V5.5l8-3.3Z"></path>
+            <path d="m8.7 12.2 2.2 2.2 4.8-5"></path>
+          </svg>
+        </div>
+        <strong id="tituloEstado">Proteccion activada</strong>
+        <span id="detalleEstado">Estas navegando sin anuncios</span>
+      </section>
+
+      <section class="metricas">
         <div>
-          <p class="marca">AdBlock Pro</p>
-          <p id="estado" class="estado">Proteccion activa</p>
+          <span>Anuncios bloqueados</span>
+          <strong id="bloqueados">0</strong>
+        </div>
+      </section>
+
+      <footer class="sitio">
+        <div>
+          <span class="etiqueta">Sitio web actual</span>
+          <strong id="dominio">Cargando...</strong>
         </div>
         <button id="interruptor" class="interruptor" type="button" aria-label="Activar o desactivar proteccion">
           <span></span>
         </button>
-      </header>
-
-      <section class="sitio">
-        <span class="etiqueta">Sitio actual</span>
-        <strong id="dominio">Cargando...</strong>
-      </section>
-
-      <footer class="acciones">
-        <button id="opciones" type="button">Opciones</button>
-        <button id="recargar" type="button">Recargar</button>
       </footer>
+
+      <button id="recargar" class="recargar" type="button">Recargar pestaña</button>
     </main>
     <script src="popup.js"></script>
   </body>
