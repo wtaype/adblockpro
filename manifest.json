@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "AdBlock Pro",
+  "description": "Bloqueador de anuncios liviano, silencioso y enfocado en privacidad.",
+  "version": "0.1.0",
+  "minimum_chrome_version": "120",
+  "permissions": [
+    "declarativeNetRequest",
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "main/servicio.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "AdBlock Pro",
+    "default_popup": "main/popup.html"
+  },
+  "options_page": "main/opciones.html",
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "reglas_base",
+        "enabled": true,
+        "path": "main/reglas.json"
+      }
+    ]
+  }
+}

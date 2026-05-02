@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AdBlock Pro</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="panel">
+      <header class="cabecera">
+        <div>
+          <p class="marca">AdBlock Pro</p>
+          <p id="estado" class="estado">Proteccion activa</p>
+        </div>
+        <button id="interruptor" class="interruptor" type="button" aria-label="Activar o desactivar proteccion">
+          <span></span>
+        </button>
+      </header>
+
+      <section class="sitio">
+        <span class="etiqueta">Sitio actual</span>
+        <strong id="dominio">Cargando...</strong>
+      </section>
+
+      <footer class="acciones">
+        <button id="opciones" type="button">Opciones</button>
+        <button id="recargar" type="button">Recargar</button>
+      </footer>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
